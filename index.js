@@ -1,14 +1,14 @@
-var inputElement = document.getElementById("emequa");
-var boton = document.getElementById("emebutt");
-
-boton.addEventListener("click", function () {
-    var resultEl = document.getElementById("result");
-    var inputCalc = inputElement.value;
-    var result = (inputCalc * 4)
-    if(isNaN(result)){
-        result = "Error: Input is Not a number"
-    }else if(result <= 0) result = "Error: Input must be greater than 0"
-    resultEl.innerHTML = result
-    console.log("Texto ingresado: " + inputCalc + " Resultado: " + result);
-    console.log(result);
-});
+const form = document.getElementById('emerald_form')
+console.log(form)
+const handleSubmit = (e) => {
+  e.preventDefault()
+  const entry = form.querySelector('.text-box').value
+  const result = calculateEmerald(entry)
+  const resultParagraph = document.createElement('p')
+  resultParagraph.innerHTML = `You need ${result} logs.`
+  document.body.appendChild(resultParagraph)
+}
+const calculateEmerald = (n) => {
+  return n * 4
+}
+form.addEventListener('submit', handleSubmit)
