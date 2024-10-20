@@ -25,8 +25,52 @@ body{
 }
 
 .text-box{
-    background-color: black;
-    color: white;
-    border-radius: 3px;
-    border-color: white;
+  font-family: inherit;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  border-color: white;
+}
+
+.btn {
+  font-family: inherit;
+  padding: 10px;
+  background-color: rgb(156, 150, 150);
+  border: 2px solid rgb(63, 62, 62);
+  color: white;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(173, 169, 169) !important;
+  color: black;
+}
+.inventory{
+  background-color: #fff;
+  width: 27em;
+  padding: 0.25rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  height: auto;
+}
+.inv-row {
+  display: flex;
+}
+
+.inv-slot {
+  width: 3em;
+  height: 3em;
+  background-color: gray;
+  box-shadow: inset 1.5px 1.5px 0px rgba(55, 55, 55, 0.8), inset -2px -2px 0px #ffffff;
+  margin: 0;
+  display: flex;
+}
+.inv-slot[used]{
+  background-image: url('../img/wood.webp');
+  background-size: 3em;
+  align-items: end;
+  justify-content: end;
+  font-weight: 600;
 }
